@@ -21,7 +21,7 @@ Domain Path: /languages
  */
 function shortcodetwitter_sharetwitter( $atts, $content = null ) {
     $atts_sharetwitter = shortcode_atts( array(
-        'text' => '',
+        'text' => 'Compartir en Twitter',
         'size' => 'small',
     ), $atts );
 
@@ -31,7 +31,7 @@ function shortcodetwitter_sharetwitter( $atts, $content = null ) {
 	if ( $atts_sharetwitter['size'] == 'big' )
 		$bigclass = 'sct-twitter-big';
 	
-	$content = '<a class="sct-twitter ' . $bigclass . '" target="_blank" href="' . $link_twitter . '" title="Compartir en Twitter">' . $atts_sharetwitter['text'] . '</a>';
+	$content = '<a class="sct-twitter ' . $bigclass . '" target="_blank" href="' . $link_twitter . '">' . $atts_sharetwitter['text'] . '</a>';
 	
 	return $content;
 }
