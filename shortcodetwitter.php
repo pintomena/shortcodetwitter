@@ -31,9 +31,9 @@ function shortcodetwitter_sharetwitter( $atts, $content = null ) {
 	if ( $atts_sharetwitter['size'] == 'big' )
 		$bigclass = 'sct-twitter-big';
 	
-	$output = '<a class="sct-twitter ' . $bigclass . '" target="_blank" href="' . $link_twitter . '" title="Compartir en Twitter">' . $atts_sharetwitter['text'] . '</a>';
+	$content = '<a class="sct-twitter ' . $bigclass . '" target="_blank" href="' . $link_twitter . '" title="Compartir en Twitter">' . $atts_sharetwitter['text'] . '</a>';
 	
-	return $output;
+	return $content;
 }
 add_shortcode( 'sct_sharetwitter', 'shortcodetwitter_sharetwitter' );
 
